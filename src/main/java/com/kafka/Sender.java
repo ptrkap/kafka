@@ -17,7 +17,7 @@ public class Sender {
 
         Producer kafkaProducer = new KafkaProducer(properties);
 
-        ProducerRecord record = new ProducerRecord<Long, String>("foobar", "test8");
+        ProducerRecord record = new ProducerRecord<Long, String>("foobar", "test23");
         RecordMetadata meta = (RecordMetadata) kafkaProducer.send(record).get();
         System.out.println("partition: " + meta.partition());
         System.out.println("offset: " + meta.offset());

@@ -21,7 +21,6 @@ public class ReceiverAvro {
         properties.put(KafkaAvroDeserializerConfig.SPECIFIC_AVRO_READER_CONFIG, "true");
         properties.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://localhost:8081");
 
-
         Consumer kafkaConsumer = new KafkaConsumer(properties);
         String topic = "customers";
         kafkaConsumer.subscribe(Collections.singletonList(topic));

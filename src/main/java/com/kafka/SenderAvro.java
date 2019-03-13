@@ -22,8 +22,8 @@ public class SenderAvro {
                 .setFirstName("Piotr")
                 .setLastName("Kapcia")
                 .setAge(32)
-                .setHeight(183)
-                .setWeight(86)
+                .setHeight(182.5f)
+                .setWeight(86.3f)
                 .setAutomatedEmail(true)
                 .build();
 

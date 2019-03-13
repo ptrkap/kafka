@@ -23,11 +23,11 @@ public class ReceiverAvro {
 
 
         Consumer kafkaConsumer = new KafkaConsumer(properties);
-        kafkaConsumer.subscribe(Collections.singletonList("_schemas"));
+        String topic = "customers";
+        kafkaConsumer.subscribe(Collections.singletonList(topic));
 
         while(true) {
             ConsumerRecords<Long, Customer> consumerRecords = kafkaConsumer.poll(1000);
-            System.out.println(consumerRecords.isEmpty());
             consumerRecords.forEach(record -> {
                 System.out.println("--------------------------");
                 System.out.println("key: " + record.key());
